@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #febd69; /* Amazon Add to Cart button color */
+  --primary-shad: #d49644; /* Slightly transparent version of the Amazon color */
+  --my-blue: rgb(9, 132, 209);
+  --Amazon-btn: #fcda42;
+  
+/* Related with the Footer */
+
+  --footer-bg: #232F3E;
+  --footer-text: white;
+  --link-hover: gray;
+  --section-bg: #37475A;
+  --border-color: rgb(204, 204, 204);
+  --font-family: "Amazon Ember", Arial, sans-serif;
+  --font-size-sm: 0.88rem;
+  --font-size-md: 1rem;
+}
+
+html {
+  font-size: 16px; /* Default font size */
+}
+/* body{
+  padding-top: 95px;
+} */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Smaller font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px; /* Even smaller font size for mobile */
+  }
+}
+
+
+

@@ -1,0 +1,212 @@
+/* body{
+    padding-top: 5px;
+} */
+
+.login{
+    display: flex;
+     flex-direction: column;
+    align-items: center;
+    height: 100vh;
+     
+}
+
+.login img{
+    width: 104px;
+    object-fit: contain;
+    margin: 18px auto;
+}
+.login_container{
+    width: 350px;
+     display: flex;
+     flex-direction: column;
+     border-radius: 5px;
+     border: 1px solid lightgray;
+     padding: 20px;
+}
+.login_container h1{
+    font-family: "Amazon Ember", Arial sans-serif;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: rgb(15, 17, 17);
+    margin-bottom: 10px ;
+}
+
+.login_container form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login_container form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.login_container form input{
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    background-color: white;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+     
+}
+
+.login_container form input:focus{
+    border-color: #007185;
+    /* outline: 2px solid #007185; */
+    box-shadow: 0 0 0 2px rgba(0, 113, 133, 0.5);
+}
+.btn_signIn{
+    width: 100%;
+    height: 30px;
+    background-color: var(--Amazon-btn);
+     margin-top: 5px;
+     border-radius: 20px;
+     cursor: pointer;
+}
+.btn_signIn:hover{
+    background-color:#F7CA00;
+   
+}
+.terms_links{
+    margin-top: 15px;
+    font-family: "Amazon Ember", Arial sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1rem;
+}
+.terms_links a:hover{
+    color: rgb(199, 81, 31) !important;
+}
+.terms_links a{
+    font-family: "Amazon Ember", Arial sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1rem;
+
+}
+.help{
+    margin: 22px 0;
+    font-family:"Amazon Ember", Arial sans-serif;
+    font-size: 0.87rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: #007185;
+}
+.help:hover{
+    color: rgb(199, 81, 31) !important;
+    cursor: pointer;
+}
+.help_hr{
+    border: 0.5px solid #D5D9D9;  
+}
+.buying_for_work{
+    margin-top: 20px;
+    font-family: "Amazon Ember", Aria sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgb(15, 17, 17);
+}
+.buying_for_work a{
+    font-family: "Amazon Ember", Aria sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #007185;
+    cursor: pointer;
+}
+.buying_for_work a:hover{
+    color: rgb(199, 81, 31) !important;
+    text-decoration: underline;
+}
+.newToAmazon_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    width: 350px;
+}
+
+.newToAmazon_container::before, 
+.newToAmazon_container::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color:#ccc; 
+}
+.newToAmazon{
+    font-family:"Amazon Ember", Aria sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(89, 89, 89);
+    cursor: pointer;
+}
+.btn_createAccount{
+    font-family:"Amazon Ember", Aria sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: rgb(15, 17, 17);
+}
+ button.btn_createAccount{
+    padding-bottom: 25px !important;
+   
+}
+.btn_createAccount:focus{
+    border-color: #007185;
+    /* outline: 2px solid #007185; */
+    box-shadow: 0 0 0 2px rgba(0, 113, 133, 0.5);
+}
+
+
+.btn_createAccount{
+    width: 350px;
+    height: 30px;
+    background-color: white;
+     margin-top: 5px;
+     border: 1px solid lightgray;
+     border-radius: 20px;
+     cursor: pointer;
+}
+.create_account_hr{
+    border: 1px solid #D5D9D9;
+    width: 100%;
+    margin: 30px 0 20px 0;
+}
+
+
+.footer_links_container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 5px;
+}
+.btn_createAccount:hover{
+    background-color: #f0f2f2;
+     
+     
+}
+
+.footer_links_container div a{
+    font-family: "Amazon Ember", Aria sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: #007185;
+    cursor: pointer;
+}
+.footer_links_container div a:hover{
+    color: rgb(199, 81, 31) !important;
+    text-decoration: underline;
+}
+.copy_right{
+    font-family: "Amazon Ember", Aria sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: rgb(89, 89, 89);
+    margin: 10px 0 20px 0;
+}
+
