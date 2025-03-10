@@ -166,15 +166,13 @@
 
     /* Lower Header styles */
 
-    .lower_header ul li:not (:first-child) {
+    .lower_header ul li:not(:first-child) {
       display: none;
     }
     .language {
       display: none;
     }
   }
-
-
   .lower_header {
      
     

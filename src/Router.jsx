@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import Landing from './Pages/Landing/Landing';
 import Payment from './Pages/Payment/Payment';
 import Orders from './Pages/Orders/Orders';
@@ -14,7 +15,7 @@ import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 const stripePromise = loadStripe('pk_test_51QwkXDAwsVVf7WtstCLULoxsyCWHFPiotYWv4mLAaj4WUHNxJLDVq9mpxJ4Ve3lsygIAliYPSnCDIzHehN0FHVk000c8WRuJxC');
 const Routing = () => {
   return (
-     <Router> 
+     <BrowserRouter basename="/Amazon_Clone_Final_Version/"> 
       <Routes>
         <Route path='/' element={ <Landing/>}/>
         <Route path='/auth' element={ <Auth/>}/>
@@ -37,7 +38,7 @@ const Routing = () => {
         <Route path='/products/:productId' element={<ProductDetail/>}/>
         <Route path='signup' element={<Auth/>}/>  
       </Routes>
-     </Router>
+     </BrowserRouter>
   )
 }
 export default Routing

@@ -8,5 +8,5 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
-  // base: "/New_Amazon_Clone/",
+  base: "/Amazon_Clone_Final_Version/",
 })
