@@ -17,8 +17,7 @@ const Results = () => {
         axios.get(`${productUrl}/products/category/${categoryName}`)
         .then((res) => {
             setResults(res.data)
-            setIsLoading(false)
-            console.log(res)
+            setIsLoading(false)  
         }).catch((err) => {
             console.log(err)
             setIsLoading(false)

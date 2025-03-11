@@ -1,121 +1,300 @@
-.footer {
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
-    text-align: center;
-    padding-bottom: 20px;
-    font-family: var(--font-family);
-  }
-  
-  .backToTop {
-    background-color: var(--section-bg);
-    padding: 10px;
-  }
-  
-  .backToTop a {
-    color: var(--footer-text);
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .footerLinks {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--link-hover);
-  }
-  
-  .column {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-size: var(--font-size-sm);
-    line-height: 1rem;
-  }
-  
-  .column h4 {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: var(--font-size-md);
-  }
-  
-  .column a {
-    color: var(--footer-text);
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .column a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0;
+/* .footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: var(--font-family);
+}
 
+.backToTop {
+  background-color: var(--section-bg);
+  padding: 10px;
+}
+
+.backToTop a {
+  color: var(--footer-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--link-hover);
+}
+
+.column {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  line-height: 1rem;
+}
+
+.column h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+}
+
+.column a {
+  color: var(--footer-text);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.column a:hover {
+  text-decoration: underline;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+
+}
+
+.bottomFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  margin-left: 10px;
+}
+
+
+.amazonLogoLink {
+  display: block;
+}
+.amazonLogoLink img {
+  width: 80px;
+  height: auto;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+}
+
+.options button {
+  background-color: transparent;
+  border: 0.5px solid var(--border-color);
+  color: var(--border-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+.btn__language {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.usd,
+.country {
+  width: 150px;
+  height: 34px;
+} */
+
+/* .country {
+  display: flex;
+  align-items: center;
+  gap: 8px;  */
+  /* Space between flag and text */
+  /* padding: 8px 12px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+} */
+/* 
+.flag {
+  width: 17px;
+  height: 12px;
+}
+
+
+
+ */
+
+
+ /* Footer.module.css */
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: var(--font-family);
+}
+
+.backToTop {
+  background-color: var(--section-bg);
+  padding: 10px;
+}
+
+.backToTop a {
+  color: var(--footer-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Mobile-First: Initially, stack the columns */
+.footerLinks {
+  display: flex;
+  flex-direction: column; /* Stack columns on smaller screens */
+  align-items: center; /* Center items horizontally */
+  padding: 20px 0;
+  border-bottom: 1px solid var(--link-hover);
+}
+
+.column {
+  text-align: center; /* Center text on smaller screens */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+  line-height: 1rem;
+  margin-bottom: 20px; /* Add space between columns */
+  width: 100%; /* Make columns take full width on mobile */
+}
+
+.column h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: var(--font-size-md);
+}
+
+.column a {
+  color: var(--footer-text);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.column a:hover {
+  text-decoration: underline;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.bottomFooter {
+  display: flex;
+  flex-direction: column; /* Stack items on smaller screens */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center content */
+  padding: 20px;
+  margin-left: 0; /* Reset margin */
+}
+
+.amazonLogoLink {
+  display: block;
+  margin-bottom: 10px; /* Add some space below the logo */
+}
+
+.amazonLogoLink img {
+  width: 80px;
+  height: auto;
+  margin-right: 0; /* Reset margin */
+  margin-top: 10px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column; /* Stack options on smaller screens */
+  align-items: center; /* Center items horizontally */
+  gap: 10px;
+}
+
+.options button {
+  background-color: transparent;
+  border: 0.5px solid var(--border-color);
+  color: var(--border-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 5px;
+  width: 100%; /* Take full width */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.btn__language {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content */
+  gap: 10px;
+  padding: 5px;
+}
+
+.usd,
+.country {
+  width: 100%; /*Full width on mobile*/
+  height: 34px;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: none;
+  background-color: transparent; /* Match background color */
+  cursor: pointer;
+}
+
+.flag {
+  width: 17px;
+  height: 12px;
+}
+
+/* Media Query: For larger screens, restore the horizontal layout */
+@media (min-width: 768px) {
+  .footerLinks {
+    flex-direction: row; /* Restore horizontal layout */
+    justify-content: space-evenly; /* Distribute columns evenly */
+    align-items: flex-start; /* Align items to the top */
   }
-  
+
+  .column {
+    text-align: left; /* Restore left alignment */
+    width: auto; /* Allow columns to size based on content */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
   .bottomFooter {
-    display: flex;
-    align-items: center;
+    flex-direction: row; /* Restore horizontal layout */
     justify-content: space-between;
+    align-items: center;
     padding: 20px 50px;
     margin-left: 10px;
   }
-  
 
-  .amazonLogoLink {
-    display: block;
-  }
   .amazonLogoLink img {
-    width: 80px;
-    height: auto;
     margin-right: 100px;
-    margin-top: 10px;
   }
-  
+
   .options {
-    display: flex;
-    gap: 10px;
+    flex-direction: row;
   }
-  
+
   .options button {
-    background-color: transparent;
-    border: 0.5px solid var(--border-color);
-    color: var(--border-color);
-    font-size: 0.8rem;
-    cursor: pointer;
-    padding: 6px 12px;
-    border-radius: 5px;
+    width: auto;
   }
-  
-  .btn__language {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 5px;
-  }
-  
+
   .usd,
   .country {
     width: 150px;
-    height: 34px;
   }
-
-  .country {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Space between flag and text */
-    padding: 8px 12px;
-    border: none;
-    background-color: white;
-    cursor: pointer;
-  }
-  
-  .flag {
-    width: 17px;
-    height: 12px;
-  }
-  
+}

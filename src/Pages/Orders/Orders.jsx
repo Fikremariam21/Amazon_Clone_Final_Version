@@ -16,7 +16,6 @@ const Orders = () => {
         .collection("orders")
         .orderBy("created", "desc")
         .onSnapshot((snapshot) => {
-          console.log(snapshot);
           setOrders(
             snapshot.docs.map((doc) => ({
               id: doc.id,
@@ -41,7 +40,7 @@ const Orders = () => {
               return (
                 <div key={i}>
                   <hr />
-                  <p> Order ID: {eachOrder?.id}</p>
+                  <p className={styles.orderId}> Order ID: {eachOrder?.id}</p>
                   {eachOrder?.data?.basket?.map((order) => {
                     return <ProductCard
                     product={order}
@@ -49,7 +48,7 @@ const Orders = () => {
                     key={order.id}
                     />;
                   })}
-                </div>
+                </div> 
               );
             })}
           </div>

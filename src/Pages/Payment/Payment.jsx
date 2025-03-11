@@ -24,12 +24,14 @@ const Payment = () => {
   const [cardError, setCardError] = useState(null);
   const [processing, setProcessing] = useState(false);
 
+ // Initializing Stripe objects
+ //***************************//
   const stripe = useStripe();
   const elements = useElements();
+
   const navigate= useNavigate();
 
   const handleChange = (e) => {
-    console.log(e);
     e?.error?.message ? setCardError(e?.error?.message) : setCardError("");
   };
   const handlePayment = async (e) => {
@@ -43,21 +45,25 @@ const Payment = () => {
         method: "POST",
         url: `/payment/create?total=${total * 100}`,
       });
-      const clientSecret = response.data?.clientSecret;
+      // The backend response contains a clientSecret, which is extracted as: 
+      const clientSecret = response.data?.clientSecret; 
 
       // Step Two
       // It will confirm client side(react-side) to use the stripe 
 
-      const { paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+
+      // stripe.confirmCardPayment returns paymentIntent
+      const { paymentIntent } = await stripe.
+       confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
         },
       });
-      console.log(paymentIntent);
+
       // confirmation completed
       //**********************//
       // Step Three
-      // After the confirmation, we will save the item inside the basket on firebase server and clear the basket
+      // After the confirmation, we will save the item inside the basket on firebase server and clear the cart
       await db
         .collection("users")
         .doc(user.uid)
@@ -71,8 +77,7 @@ const Payment = () => {
         // Empty the basket
         //****************//
 
-        dispatch({ type: Type.EMPTY_BASKET})
-
+        dispatch({ type: Type.EMPTY_BASKET}) 
 
       setProcessing(false);
       navigate('/orders', {state:{img: "You have placed new order"}})
@@ -84,7 +89,7 @@ const Payment = () => {
   return (
     <LayOut>
       {/* Header */}
-      <div className={styles.payment_header}>
+      <div className={styles.payment_header}> 
         Checkout ({totalItems}) items{" "}
         {/*to make the item number dynamic, we will import our basket. In our case the basket is found in DataContext. Then we will import useContext */}
       </div>

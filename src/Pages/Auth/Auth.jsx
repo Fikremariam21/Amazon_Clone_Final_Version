@@ -20,16 +20,14 @@ function Auth() {
 
   const navigate = useNavigate() // initializing navigate function
   const navStateData = useLocation() 
-  console.log(user)
-
   const authHandler = async(e) =>{
     setLoading({...loading, signIn: true})
     e.preventDefault();
-    console.log(e.target.name)
+     
     if(e.target.name === "Signin"){
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential)
+        
         dispatch({
           type: 'SET_USER',
           user: userCredential.user, // accessing the user data from userCredential object
