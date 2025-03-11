@@ -46,7 +46,7 @@ const Payment = () => {
       const clientSecret = response.data?.clientSecret;
 
       // Step Two
-      // It will confirm client side(react-side) to use the stripe
+      // It will confirm client side(react-side) to use the stripe 
 
       const { paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
