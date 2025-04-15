@@ -40,14 +40,11 @@ const Results = () => {
                 renderAdd={true}
                 />
             ))}
-
         </div>
     </div>
             )
         }
-
     </LayOut>
   )
 }
-
 export default Results

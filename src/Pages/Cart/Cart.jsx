@@ -35,7 +35,7 @@ const Cart = () => {
           {
             basket?.length === 0 ? <h3> Your basket is empty </h3> :
             basket?.map((item) => {
-              return <section className={styles.cart_product}> 
+              return <section key={item.id} className={styles.cart_product}> 
               <ProductCard
               key={item.id} 
               product={item}
